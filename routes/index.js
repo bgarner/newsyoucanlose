@@ -6,13 +6,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/hello',function(req, res) {
-	res.send('hwlloooadmofa f');
-});	
 
-
-router.post('/sendapost', function (req, res) {
-  res.send('Got a POST request');
-});
 
 module.exports = router;

@@ -2,9 +2,17 @@ extends layout
 
 block content
   img(src="/images/logo.gif" class="logo")
-  p Submit a Link
+
   div.form-group#submitbox
+    p Submit a Link
     form.form-inline
       input.form-text#linkinput
       button.btn.btn-secondary.btn-lg#submitlink submit
       br.clear
+
+  div.container-fluid
+    div.row
+      div.col-sm-12.col-md-6.col-lg-6.col-xl-6
+        h4 Today
+      div.col-sm-12.col-md-6.col-lg-6.col-xl-6
+        h4 This Week
