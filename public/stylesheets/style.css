@@ -4,7 +4,7 @@ body {
 }
 
 .logo{
-	  padding: 50px;
+	  padding: 50px 50px 0px 50px;
 }
 
 a {
@@ -13,6 +13,13 @@ a {
 
 p{
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+p.instruction{
+	position: relative;
+	top: 13px;
+	background-color: #fff;
+	color: #555;
 }
 
 .logo{
@@ -25,8 +32,10 @@ p{
 	display: block;
 	width: 100%;
 	height: 120px;
-	background-color: #ccc;
+	background: #eee url('/images/dark-denim-3.png') top left repeat;
 	margin: 0;
+	margin-top: 10px;
+	margin-bottom: 50px;
 }
 
 form{
@@ -56,9 +65,12 @@ form{
 	clear: both;
 }
 
+.center{
+	text-align: center;
+}
 
 h4{
-	font-weight: normal;
+/*	font-weight: normal;*/
 	color: #666;
 	text-transform: uppercase;
 }
