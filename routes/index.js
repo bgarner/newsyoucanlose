@@ -1,12 +1,39 @@
 var express = require('express');
+var request = require('request');
+var bodyParser = require('body-parser')
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
+	var currentdate = new Date(); 
+	var datetime = currentdate.getDate() + "/"
+					+ (currentdate.getMonth()+1)  + "/" 
+					+ currentdate.getFullYear() + " @ "  
+					+ currentdate.getHours() + ":"  
+					+ currentdate.getMinutes() + ":" 
+					+ currentdate.getSeconds();
 
+	res.render('index', 
+		{
+			title: 'Express', 
+			todaydate: datetime 
+		}
+	);
 
-  res.render('index', { title: 'Express', todaydate: 'this is todays date' });
+});
+
+router.post('/testrequest', function(req, res){
+	//Tell the request that we want to fetch youtube.com, send the results to a callback function
+	var uri = req.headers.url;
+	
+	request(uri, function (error, response, body) {
+
+  		if (!error && response.statusCode == 200) {
+    		console.log(body) // Show the HTML for the Google homepage.
+  		}
+
+	});
 });
 
 

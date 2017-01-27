@@ -66,11 +66,24 @@ form{
 }
 
 .center{
-	text-align: center;
+	text-align: center !important;
 }
 
 h4{
 /*	font-weight: normal;*/
 	color: #666;
 	text-transform: uppercase;
+}
+
+#loader{
+	display: block;
+    margin-left: 49%;
+    margin-top: 18px;
+}
+
+#html {
+    left: 50%;
+    margin-left: -250px;
+    position: absolute;
+    top: 100px;
 }
