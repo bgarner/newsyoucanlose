@@ -2,6 +2,7 @@ var express = require('express');
 var request = require('request');
 var bodyParser = require('body-parser')
 var router = express.Router();
+require('events').EventEmitter.defaultMaxListeners = Infinity;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -26,11 +27,14 @@ router.get('/', function(req, res, next) {
 router.post('/testrequest', function(req, res){
 	//Tell the request that we want to fetch youtube.com, send the results to a callback function
 	var uri = req.headers.url;
-	
+	console.log(uri);
+
 	request(uri, function (error, response, body) {
 
   		if (!error && response.statusCode == 200) {
     		console.log(body) // Show the HTML for the Google homepage.
+			res.status(200);
+		    res.send('we good');	    		
   		}
 
 	});
