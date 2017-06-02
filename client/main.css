@@ -1,0 +1,90 @@
+/* CSS declarations go here */
+body {
+/**/
+/*  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+}
+
+.logo{
+	  padding: 50px 50px 0px 50px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+p{
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+p.instruction{
+	position: relative;
+	top: 13px;
+	background-color: #fff;
+	color: #555;
+}
+
+.logo{
+	display: block;
+	width: 450px;
+	margin: 0 auto;
+}
+
+#submitbox{
+	display: block;
+	width: 100%;
+	height: 120px;
+	background: #eee url('/images/dark-denim-3.png') top left repeat;
+	margin: 0;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+form{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#linkinput{
+	color: #292b2c;
+    background-color: #fff;
+    border-color: #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    padding: .75rem .75rem;
+    font-size: 1.25rem;
+    border-radius: .3rem;
+	font-size: 16px;
+	width: 80%;
+	position: relative;
+	bottom: 2px;
+}
+
+#submitlink{
+
+}
+
+.clear{
+	clear: both;
+}
+
+.center{
+	text-align: center !important;
+}
+
+h4{
+/*	font-weight: normal;*/
+	color: #666;
+	text-transform: uppercase;
+}
+
+#loader{
+	display: block;
+    margin-left: 49%;
+    margin-top: 18px;
+}
+
+#html {
+    left: 50%;
+    margin-left: -250px;
+    position: absolute;
+    top: 100px;
+}

@@ -1,7 +1,36 @@
 <head>
-    <meta charset="utf-8">
-    <title>here is a title</title>
+  <title>news</title>
 </head>
+
 <body>
-    <h1>gksdlkjsd</h1>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+  {{> login}}
+  {{> info}}
 </body>
+
+<template name="login">
+        {{#if currentUser}}
+            Now you're logged in as <strong>{{currentUser.username}}</strong> using {{getEmail}}
+
+            <br> <br> <button class="log-out">Log out</button>
+        {{else}}
+            <button class="log-in login-facebook" >Facebook Login</button>
+        {{/if}}
+</template>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  </ul>
+</template>
